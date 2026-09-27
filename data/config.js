@@ -5,34 +5,34 @@
 
 var SIMULATOR_CONFIG = {
   // ===== 基本信息 =====
-  title: '离恨烟夺宝抽奖模拟器',
-  loadingLogo: '离恨烟夺宝',
+  title: '业火无量夺宝抽奖模拟器',
+  loadingLogo: '业火无量夺宝',
   
   // ===== 抽奖币（购买获得）=====
   gachaCoin: {
-    name: '离恨烟夺宝币',
+    name: '业火无量夺宝币',
     quality: 'gold',
   },
   
   // ===== 兑换币（分解获得）=====
   exchangeCoin: {
-    name: '离恨烟兑换币',
-    smallImage: '../images/items_box/离恨烟兑换币/small.png',
-    bonusImage: '../images/items_box/离恨烟兑换币/bonus.png',
+    name: '业火无量兑换币',
+    smallImage: '../images/items_box/无量业火兑换币x18/small.png',
+    bonusImage: '../images/items_box/无量业火兑换币x18/small.png',
     quality: 'purple',
   },
   
   // ===== 主题颜色 =====
   theme: {
-    primaryColor: '#4a8c5f',
-    primaryColorRgb: '74,140,95',
-    primaryColorLight: '#5fa875',
-    accentColor: '#7dd89a',
+    primaryColor: '#c43e1f',
+    primaryColorRgb: '196,62,31',
+    primaryColorLight: '#e05a35',
+    accentColor: '#ff8c5a',
   },
   
   // ===== 操作指南 =====
   guide: {
-    title: '离恨烟夺宝操作指南',
+    title: '业火无量夺宝操作指南',
     steps: [
       '1. 手机开启自动旋转，点击右上角全屏按钮横屏使用。',
       '2. 首页有"抽奖1次"和"抽奖10次"两个按钮，点击进行抽奖。',
