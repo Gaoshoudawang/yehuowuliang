@@ -5,7 +5,7 @@
   <meta name="supported-color-schemes" content="light">
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>离恨烟夺宝抽奖模拟器</title>
+<title>业火无量夺宝抽奖模拟器</title>
 <style>
 :root{
   --primary-color: #4a8c5f;
@@ -132,15 +132,15 @@ body.is-fullscreen .disclaimer-box{display:none!important}
 .buy-success-box{position:relative;width:100vw;height:calc(100vw * 1080 / 2340);max-height:100vh;max-width:calc(100vh * 2340 / 1080);background:#000;overflow:hidden}
 .buy-success-box iframe{width:100%;height:100%;border:none;display:block;background:#000}
 /* 额外加赠提示弹窗 */
-.bonus-tip-modal{position:fixed;inset:0;z-index:999998;background:#000;display:none;align-items:center;justify-content:center}
-.bonus-tip-modal.show{display:flex!important}
-.bonus-tip-box{position:relative;width:100vw;height:calc(100vw * 1080 / 2340);max-height:100vh;max-width:calc(100vh * 2340 / 1080);background:#000;overflow:hidden}
-.bonus-tip-box iframe{width:100%;height:100%;border:none;display:block;background:#000}
+// .bonus-tip-modal{position:fixed;inset:0;z-index:999998;background:#000;display:none;align-items:center;justify-content:center}
+// .bonus-tip-modal.show{display:flex!important}
+// .bonus-tip-box{position:relative;width:100vw;height:calc(100vw * 1080 / 2340);max-height:100vh;max-width:calc(100vh * 2340 / 1080);background:#000;overflow:hidden}
+// .bonus-tip-box iframe{width:100%;height:100%;border:none;display:block;background:#000}
 /* 额外加赠奖励弹窗 */
-.bonus-reward-modal{position:fixed;inset:0;z-index:999997;background:#000;display:none;align-items:center;justify-content:center}
-.bonus-reward-modal.show{display:flex!important}
-.bonus-reward-box{position:relative;width:100vw;height:calc(100vw * 1080 / 2340);max-height:100vh;max-width:calc(100vh * 2340 / 1080);background:#000;overflow:hidden}
-.bonus-reward-box iframe{width:100%;height:100%;border:none;display:block;background:#000}
+// .bonus-reward-modal{position:fixed;inset:0;z-index:999997;background:#000;display:none;align-items:center;justify-content:center}
+// .bonus-reward-modal.show{display:flex!important}
+// .bonus-reward-box{position:relative;width:100vw;height:calc(100vw * 1080 / 2340);max-height:100vh;max-width:calc(100vh * 2340 / 1080);background:#000;overflow:hidden}
+// .bonus-reward-box iframe{width:100%;height:100%;border:none;display:block;background:#000}
 /* ===== 灰蓝金属确认弹窗（兑换失败用） ===== */
 .sb-confirm-panel{
   width:45%;max-width:500px;
@@ -191,7 +191,7 @@ if(typeof SIMULATOR_CONFIG !== 'undefined' && SIMULATOR_CONFIG.theme){
   root.style.setProperty('--accent-color', SIMULATOR_CONFIG.theme.accentColor);
 }
 </script>
-  <script src="data/bonus_extra.js"></script>
+//   <script src="data///bonus_extra.js"></script>
   <script src="data/buy_tiers.js"></script>
 <script src="data/item_mapping.js"></script>
   <script src="data/item_box_config.js"></script>
@@ -543,7 +543,7 @@ img {
       <div class="loading-spinner"></div>
       <div class="loading-spinner-center"></div>
     </div>
-    <div class="loading-logo">离恨烟夺宝</div>
+    <div class="loading-logo">业火无量夺宝</div>
     <div class="loading-stage" id="loadingStageText">正在初始化模拟器···</div>
     <!-- 进度条 + 百分比（同一行，百分比在进度条后面） -->
     <div class="loading-bar-row">
@@ -588,7 +588,7 @@ img {
 </div>
 <img class="layer layer-bg" src="images/common/pages/home/bg.png" draggable="false" alt="">
 <div id="totalDrawCount" style="position:absolute;left:34%;top:75%;transform:translate(-50%,-50%);font-size:48px;font-weight:bold;color:#EAE6E3;text-shadow:0 2px 8px rgba(0,0,0,0.8);z-index:10;text-align:center;background:transparent;display:none;">累计抽取：0</div>
-<img class="layer layer-weapon" src="images/common/pages/home/weapon_float.png" draggable="false" alt="">
+<img class="layer layer-weapon" src="images/common/pages/home/weapon_float.png" style="opacity:0" draggable="false" alt="">
 <div class="btn-layer" id="btnLayer">
 <div class="hotspot" data-name="返回" style="left:25px;top:25px;width:70px;height:70px"></div>
   <div class="hotspot" data-name="仓库" onclick="openWarehouse()" style="left:20px;top:30px;width:200px;height:110px"></div>
@@ -802,7 +802,7 @@ function updateTotalDrawCount(){
 
 // ============================================================
 // 盒子函数：根据道具名称和图片类型获取图片路径
-// type: 'small' | 'showcase' | 'bonus' | 'exchange'
+// // type: 'small' | 'showcase' | 'bonus' | 'exchange'
 // ============================================================
 // 盒子函数：根据道具名称和图片类型获取图片路径
 // 支持带数量的道具名称，如"近战夺宝积分×3"、"200钻石宝箱"
@@ -832,8 +832,8 @@ var storageItems = [];
 var BONUS_ITEM_POOL = window.BONUS_EXTRA_POOL || [];
 
 // 额外加赠状态
-var bonusPending = false; // 是否有待处理的额外加赠
-var bonusCurrentReward = null; // 当前额外加赠的奖励
+// var bonusPending = false; // 是否有待处理的额外加赠
+// var bonusCurrentReward = null; // 当前额外加赠的奖励
 var isBonusActive = false; // 额外加赠是否正在进行中（状态锁）
 var lastBonusDrawCount = 0; // 上一次触发额外加赠时的总次数
 
@@ -1267,8 +1267,8 @@ var PRELOAD_RESOURCES = [
   'audio/warehouse/open.m4a',
   'images/common/animation_bg/bg_button_noname.webp',
   'images/common/animation_bg/bg_start.webp',
-  'images/common/bonus/extra/tip_bg.png',
-  'images/common/bonus/extra/离恨烟兑换币.png',
+//   'images/common/bonus/extra/tip_bg.png',
+//   'images/common/bonus/extra/业火无量兑换币.png',
   'images/common/coins/cfm_coin_icon.png',
   'images/common/coins/gacha_coin_icon.png',
   'images/common/coins/points_coin_icon.png',
@@ -1297,57 +1297,57 @@ var PRELOAD_RESOURCES = [
   'images/items_box/QBZ03-王者蔷薇-烟雨之印/small.png',
   'images/items_box/QBZ03-王者蔷薇-烟雨之殇/small.png',
   'images/items_box/QBZ03-王者蔷薇-烟雨之触/small.png',
-  'images/items_box/QBZ03-王者蔷薇-离恨烟/exchange.png',
-  'images/items_box/QBZ03-王者蔷薇-离恨烟/showcase.png',
-  'images/items_box/QBZ03-王者蔷薇-离恨烟/small.png',
+  'images/items_box/QBZ03-王者蔷薇-业火无量/exchange.png',
+  'images/items_box/QBZ03-王者蔷薇-业火无量/showcase.png',
+  'images/items_box/QBZ03-王者蔷薇-业火无量/small.png',
   'images/items_box/QBZ03-王者蔷薇/exchange.png',
   'images/items_box/QBZ03-王者蔷薇/showcase.png',
   'images/items_box/QBZ03-王者蔷薇/small.png',
   'images/items_box/印花双鲤戏水/small.png',
   'images/items_box/双鲤戏水喷漆/small.png',
-  'images/items_box/手雷-王者蔷薇-离恨烟/exchange.png',
-  'images/items_box/手雷-王者蔷薇-离恨烟/showcase.png',
-  'images/items_box/手雷-王者蔷薇-离恨烟/small.png',
+  'images/items_box/手雷-王者蔷薇-业火无量/exchange.png',
+  'images/items_box/手雷-王者蔷薇-业火无量/showcase.png',
+  'images/items_box/手雷-王者蔷薇-业火无量/small.png',
   'images/items_box/手雷-王者蔷薇/exchange.png',
   'images/items_box/手雷-王者蔷薇/showcase.png',
   'images/items_box/手雷-王者蔷薇/small.png',
   'images/items_box/抛物线-烟雨之梦/small.png',
-  'images/items_box/柯尔特-王者蔷薇-离恨烟/exchange.png',
-  'images/items_box/柯尔特-王者蔷薇-离恨烟/showcase.png',
-  'images/items_box/柯尔特-王者蔷薇-离恨烟/small.png',
+  'images/items_box/柯尔特-王者蔷薇-业火无量/exchange.png',
+  'images/items_box/柯尔特-王者蔷薇-业火无量/showcase.png',
+  'images/items_box/柯尔特-王者蔷薇-业火无量/small.png',
   'images/items_box/柯尔特-王者蔷薇/exchange.png',
   'images/items_box/柯尔特-王者蔷薇/showcase.png',
   'images/items_box/柯尔特-王者蔷薇/small.png',
-  'images/items_box/烟雾弹-王者蔷薇-离恨烟/exchange.png',
-  'images/items_box/烟雾弹-王者蔷薇-离恨烟/showcase.png',
-  'images/items_box/烟雾弹-王者蔷薇-离恨烟/small.png',
+  'images/items_box/烟雾弹-王者蔷薇-业火无量/exchange.png',
+  'images/items_box/烟雾弹-王者蔷薇-业火无量/showcase.png',
+  'images/items_box/烟雾弹-王者蔷薇-业火无量/small.png',
   'images/items_box/烟雾弹-王者蔷薇/exchange.png',
-  'images/items_box/燃烧弹-王者蔷薇-离恨烟/exchange.png',
-  'images/items_box/燃烧弹-王者蔷薇-离恨烟/showcase.png',
-  'images/items_box/燃烧弹-王者蔷薇-离恨烟/small.png',
+  'images/items_box/燃烧弹-王者蔷薇-业火无量/exchange.png',
+  'images/items_box/燃烧弹-王者蔷薇-业火无量/showcase.png',
+  'images/items_box/燃烧弹-王者蔷薇-业火无量/small.png',
   'images/items_box/燃烧弹-王者蔷薇/exchange.png',
   'images/items_box/燃烧弹-王者蔷薇/showcase.png',
   'images/items_box/燃烧弹-王者蔷薇/small.png',
-  'images/items_box/王者之心-离恨烟-烟雨之印/small.png',
-  'images/items_box/王者之心-离恨烟-烟雨之殇/small.png',
-  'images/items_box/王者之心-离恨烟-烟雨之触/small.png',
-  'images/items_box/王者之心-离恨烟/exchange.png',
-  'images/items_box/王者之心-离恨烟/showcase.png',
-  'images/items_box/王者之心-离恨烟/small.png',
-  'images/items_box/王者蔷薇扇-离恨烟/exchange.png',
-  'images/items_box/王者蔷薇扇-离恨烟/showcase.png',
-  'images/items_box/王者蔷薇扇-离恨烟/small.png',
+  'images/items_box/王者之心-业火无量-烟雨之印/small.png',
+  'images/items_box/王者之心-业火无量-烟雨之殇/small.png',
+  'images/items_box/王者之心-业火无量-烟雨之触/small.png',
+  'images/items_box/王者之心-业火无量/exchange.png',
+  'images/items_box/王者之心-业火无量/showcase.png',
+  'images/items_box/王者之心-业火无量/small.png',
+  'images/items_box/王者蔷薇扇-业火无量/exchange.png',
+  'images/items_box/王者蔷薇扇-业火无量/showcase.png',
+  'images/items_box/王者蔷薇扇-业火无量/small.png',
   'images/items_box/王者蔷薇扇/exchange.png',
   'images/items_box/王者蔷薇扇/showcase.png',
   'images/items_box/王者蔷薇扇/small.png',
-  'images/items_box/离恨烟兑换币/bonus.png',
-  'images/items_box/离恨烟兑换币/small.png',
-  'images/items_box/离恨烟夺宝币/showcase.png',
-  'images/items_box/离恨烟夺宝币/small.png',
-  'images/items_box/离恨烟挂饰/small.png',
-  'images/items_box/闪光弹-王者蔷薇-离恨烟/exchange.png',
-  'images/items_box/闪光弹-王者蔷薇-离恨烟/showcase.png',
-  'images/items_box/闪光弹-王者蔷薇-离恨烟/small.png',
+//   'images/items_box/业火无量兑换币/bonus.png',
+  'images/items_box/业火无量兑换币/small.png',
+  'images/items_box/业火无量夺宝币/showcase.png',
+  'images/items_box/业火无量夺宝币/small.png',
+  'images/items_box/业火无量挂饰/small.png',
+  'images/items_box/闪光弹-王者蔷薇-业火无量/exchange.png',
+  'images/items_box/闪光弹-王者蔷薇-业火无量/showcase.png',
+  'images/items_box/闪光弹-王者蔷薇-业火无量/small.png',
   'images/items_box/闪光弹-王者蔷薇/exchange.png'
 ];
 
@@ -1376,7 +1376,7 @@ function preloadKeyPages() {
     'pages/warehouse.html',
     'pages/exchange.html',
     'pages/buy_confirm.html',
-    'pages/bonus_tip.html?preload=1',
+//     'pages///bonus_tip.html?preload=1',
     'pages/confirm.html'
   ];
   // 方案A：预加载的iframe保留在DOM中，不移除
@@ -1690,7 +1690,7 @@ function closeGachaSingle(){
   currentGachaType = null;
   
   // 检查是否满足额外加赠条件（每满十次，包括单抽）
-  checkBonusEligibility();
+  // checkBonusEligibility();
 }
 
 function openGachaTen(){
@@ -1904,7 +1904,7 @@ function closeGachaTen(){
   currentGachaType = null;
   
   // 检查是否满足额外加赠条件（每满十次）
-  checkBonusEligibility();
+  // checkBonusEligibility();
 }
 
 // ========== 额外加赠逻辑 ==========
@@ -1914,7 +1914,7 @@ function checkBonusEligibility(){
   var lastMultiple = Math.floor(lastBonusDrawCount / 10) * 10; // 上一次触发时或之前的最近10的倍数
   var currentMultiple = Math.floor(totalDrawCount / 10) * 10; // 当前次数或之前的最近10的倍数
   if(currentMultiple > lastMultiple && currentMultiple > 0){
-    bonusPending = true;
+//     bonusPending = true;
     lastBonusDrawCount = currentMultiple; // 更新上一次触发额外加赠的次数为最近的10的倍数
     // 立刻显示额外加赠提示页面
     openBonusTip();
@@ -1941,10 +1941,10 @@ function drawBonusReward(){
 // 打开额外加赠提示页面
 function openBonusTip(){
   isBonusActive = true; // 设置状态锁，防止用户进行其他操作
-  var iframe = document.getElementById('bonusTipIframe');
-  var modal = document.getElementById('bonusTipModal');
+//   var iframe = document.getElementById('bonusTipIframe');
+//   var modal = document.getElementById('bonusTipModal');
   modal.classList.remove('show');
-  iframe.src = 'pages/bonus_tip.html?t=' + Date.now();
+//   iframe.src = 'pages///bonus_tip.html?t=' + Date.now();
   iframe.onload = function(){
     setTimeout(function(){
       modal.classList.add('show');
@@ -1954,46 +1954,46 @@ function openBonusTip(){
 
 // 关闭额外加赠提示页面，然后进行概率抽奖，显示奖励展示页面
 function closeBonusTip(){
-  var iframe = document.getElementById('bonusTipIframe');
-  var modal = document.getElementById('bonusTipModal');
+//   var iframe = document.getElementById('bonusTipIframe');
+//   var modal = document.getElementById('bonusTipModal');
   modal.classList.remove('show');
   iframe.onload = null;
   iframe.src = 'about:blank';
   // 进行概率抽奖，获得额外加赠的奖励
-  bonusCurrentReward = drawBonusReward();
+//   bonusCurrentReward = drawBonusReward();
   // 立刻显示额外加赠奖励展示页面
   openBonusReward();
   return;
-  if(bonusCurrentReward){
+//   if(bonusCurrentReward){
     // 统一用getItemImage函数获取图片，支持带数量的道具名称（如"近战夺宝积分×3"、"99钻石宝箱×1"）
-    // 有出货动画的道具用showcase大图，没有的用bonus小图
-    var imgType = needShowcase(bonusCurrentReward) ? 'showcase' : 'bonus';
-    bonusCurrentReward.image = '../' + window.getItemImage(bonusCurrentReward.name, imgType);
+//     // 有出货动画的道具用showcase大图，没有的用bonus小图
+//     var imgType = needShowcase(bonusCurrentReward) ? 'showcase' : 'bonus';
+//     bonusCurrentReward.image = '../' + window.getItemImage(bonusCurrentReward.name, imgType);
     // 从ITEM_MAPPING获取品质，如果没有则默认gold
-    var cleanName = bonusCurrentReward.name ? bonusCurrentReward.name.replace(/[×*]\d+$/, '') : '';
+//     var cleanName = bonusCurrentReward.name ? bonusCurrentReward.name.replace(/[×*]\d+$/, '') : '';
     if(window.ITEM_MAPPING && window.ITEM_MAPPING[cleanName]){
-      bonusCurrentReward.quality = window.ITEM_MAPPING[cleanName].quality;
-    }else if(window.ITEM_MAPPING && window.ITEM_MAPPING[bonusCurrentReward.name]){
-      bonusCurrentReward.quality = window.ITEM_MAPPING[bonusCurrentReward.name].quality;
+//       bonusCurrentReward.quality = window.ITEM_MAPPING[cleanName].quality;
+//     }else if(window.ITEM_MAPPING && window.ITEM_MAPPING[bonusCurrentReward.name]){
+//       bonusCurrentReward.quality = window.ITEM_MAPPING[bonusCurrentReward.name].quality;
     }else{
-      bonusCurrentReward.quality = 'gold';
+//       bonusCurrentReward.quality = 'gold';
     }
   }
   
   // 判断是否需要出货动画（跟单抽出有出货动画的道具一样的逻辑）
-  if(needShowcase(bonusCurrentReward)){
+//   if(needShowcase(bonusCurrentReward)){
     // 需要出货动画，构造item对象，调用showSendToWarehouseReward函数
     var item = {
-      name: bonusCurrentReward.name,
-      quality: bonusCurrentReward.quality || 'gold',
-      image: bonusCurrentReward.image,
+//       name: bonusCurrentReward.name,
+//       quality: bonusCurrentReward.quality || 'gold',
+//       image: bonusCurrentReward.image,
       showcase: true,
       count: 1
     };
     // 重置特殊奖池状态
-    bonusPending = false;
+//     bonusPending = false;
     isBonusActive = false;
-    bonusCurrentReward = null;
+//     bonusCurrentReward = null;
     // 调用showSendToWarehouseReward函数，显示出货动画（跟单抽出有出货动画的道具一样的逻辑）
     showSendToWarehouseReward([item]);
   }else{
@@ -2004,14 +2004,14 @@ function closeBonusTip(){
 
 // 打开额外加赠奖励展示页面
 function openBonusReward(){
-  var iframe = document.getElementById('bonusRewardIframe');
-  var modal = document.getElementById('bonusRewardModal');
+//   var iframe = document.getElementById('bonusRewardIframe');
+//   var modal = document.getElementById('bonusRewardModal');
   modal.classList.remove('show');
   playRewardSound(); // 播放恭喜获得页面音效（在主页面中播放，不受iframe自动播放策略限制）
-  iframe.src = 'pages/bonus_reward.html?t=' + Date.now();
+//   iframe.src = 'pages///bonus_reward.html?t=' + Date.now();
   iframe.onload = function(){
     try{
-      iframe.contentWindow.postMessage({type: 'setBonusReward', item: bonusCurrentReward}, '*');
+//       iframe.contentWindow.postMessage({type: 'setBonusReward', item: bonusCurrentReward}, '*');
     }catch(e){}
     setTimeout(function(){
       modal.classList.add('show');
@@ -2021,20 +2021,20 @@ function openBonusReward(){
 
 // 关闭额外加赠奖励展示页面，将奖励添加到暂存箱
 function closeBonusReward(){
-  var iframe = document.getElementById('bonusRewardIframe');
-  var modal = document.getElementById('bonusRewardModal');
+//   var iframe = document.getElementById('bonusRewardIframe');
+//   var modal = document.getElementById('bonusRewardModal');
   modal.classList.remove('show');
   iframe.onload = null;
   setTimeout(function(){
     iframe.src = 'about:blank';
     // 处理奖励
-    if(bonusCurrentReward){
-      var item = bonusCurrentReward;
+//     if(bonusCurrentReward){
+//       var item = bonusCurrentReward;
       // 盒子架构：从ITEM_BEHAVIOR读取道具行为配置，不硬编码
-      var behavior = (window.ITEM_BEHAVIOR && window.ITEM_BEHAVIOR[item.name]) ? window.ITEM_BEHAVIOR[item.name] : {bonus_behavior: 'warehouse'};
-      var bonusBehavior = behavior.bonus_behavior || 'warehouse';
+//       var behavior = (window.ITEM_BEHAVIOR && window.ITEM_BEHAVIOR[item.name]) ? window.ITEM_BEHAVIOR[item.name] : {bonus_behavior: 'warehouse'};
+//       var bonusBehavior = behavior.bonus_behavior || 'warehouse';
       
-      if(bonusBehavior === 'points'){
+//       if(bonusBehavior === 'points'){
         // 积分类道具：增加对应积分数量
         var pointsType = behavior.points_type || 'exchange';
         var pointsAmount = behavior.points_amount || 1;
@@ -2043,7 +2043,7 @@ function closeBonusReward(){
           updatePointsDisplay();
         }
         // 其他积分类型可以在这里扩展
-      }else if(bonusBehavior === 'warehouse'){
+//       }else if(bonusBehavior === 'warehouse'){
         // 其他道具直接发送到仓库
         if(window.ITEM_MAPPING && window.ITEM_MAPPING[item.name]){
           item.image = '../' + window.getItemImage(item.name, 'small');
@@ -2055,21 +2055,21 @@ function closeBonusReward(){
         }else{
           warehouseItems.push(item);
         }
-      }else if(bonusBehavior === 'storage'){
+//       }else if(bonusBehavior === 'storage'){
         // 放入暂存箱
         addToStorage(item);
       }
-      // bonus_behavior === 'none' 时，什么都不做
-      bonusCurrentReward = null;
+//       // bonus_behavior === 'none' 时，什么都不做
+//       bonusCurrentReward = null;
     }
-    bonusPending = false;
+//     bonusPending = false;
     isBonusActive = false; // 释放状态锁，允许用户进行其他操作
   }, 300);
 }
 
 window.addEventListener('message', function(e){
   if(e.data && e.data.type === 'gachaClose'){
-    // 更新离恨烟兑换币
+    // 更新业火无量兑换币
     if(e.data.points && e.data.points > 0){
       pointsCount += e.data.points;
       updatePointsDisplay();
@@ -2097,8 +2097,8 @@ window.addEventListener('message', function(e){
     showSendToWarehouseReward(itemsToSend);
   }
   if(e.data && e.data.type === 'closeDecomposeReward') closeDecomposeReward();
-  if(e.data && e.data.type === 'bonusTipConfirm') closeBonusTip(e.data.selectedReward);
-  if(e.data && e.data.type === 'bonusRewardConfirm') closeBonusReward();
+//   if(e.data && e.data.type === 'bonusTipConfirm') closeBonusTip(e.data.selectedReward);
+//   if(e.data && e.data.type === 'bonusRewardConfirm') closeBonusReward();
   if(e.data && e.data.type === 'requestPoints'){
     var storageIframe = document.getElementById('storageIframe');
     if(storageIframe && storageIframe.contentWindow){
@@ -2628,16 +2628,16 @@ document.querySelector('[data-name="兑换"]').addEventListener('click', openExc
 </div>
 
 <!-- 额外加赠提示弹窗 -->
-<div class="bonus-tip-modal" id="bonusTipModal">
-  <div class="bonus-tip-box">
-    <iframe id="bonusTipIframe" allowfullscreen></iframe>
+// <div class="bonus-tip-modal" id="bonusTipModal">
+//   <div class="bonus-tip-box">
+//     <iframe id="bonusTipIframe" allowfullscreen></iframe>
   </div>
 </div>
 
 <!-- 额外加赠奖励弹窗 -->
-<div class="bonus-reward-modal" id="bonusRewardModal">
-  <div class="bonus-reward-box">
-    <iframe id="bonusRewardIframe" allowfullscreen></iframe>
+// <div class="bonus-reward-modal" id="bonusRewardModal">
+//   <div class="bonus-reward-box">
+//     <iframe id="bonusRewardIframe" allowfullscreen></iframe>
   </div>
 </div>
 
