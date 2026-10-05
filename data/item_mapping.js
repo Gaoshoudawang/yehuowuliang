@@ -19,11 +19,11 @@ window.ITEM_SMALL_IMAGES = {
   '闪光弹-王者蔷薇-离恨烟': 'images/items_box/闪光弹-王者蔷薇-离恨烟/small.png',
   '烟雾弹-王者蔷薇-离恨烟': 'images/items_box/烟雾弹-王者蔷薇-离恨烟/small.png',
   '燃烧弹-王者蔷薇-离恨烟': 'images/items_box/燃烧弹-王者蔷薇-离恨烟/small.png',
-  '离恨烟兑换币×18': 'images/items_box/离恨烟兑换币/small.png',
-  '离恨烟兑换币×12': 'images/items_box/离恨烟兑换币/small.png',
-  '离恨烟兑换币×6': 'images/items_box/离恨烟兑换币/small.png',
-  '离恨烟兑换币×3': 'images/items_box/离恨烟兑换币/small.png',
-  '离恨烟兑换币×2': 'images/items_box/离恨烟兑换币/small.png'
+  '无量业火兑换币x18': 'images/items_box/无量业火兑换币x18/small.png',
+  '无量业火兑换币x12': 'images/items_box/无量业火兑换币x12/small.png',
+  '无量业火兑换币x6': 'images/items_box/无量业火兑换币x6/small.png',
+  '无量业火兑换币x3': 'images/items_box/无量业火兑换币x3/small.png',
+  '无量业火兑换币x2': 'images/items_box/无量业火兑换币x2/small.png'
 };
 
 
@@ -290,7 +290,7 @@ var ITEM_BEHAVIOR = {
     gacha_behavior: 'storage',
     bonus_behavior: 'warehouse',
   },
-  '离恨烟兑换币': {
+  '无量业火兑换币': {
     quality: 'purple',
     has_showcase: false,
     gacha_behavior: 'points',
@@ -298,7 +298,7 @@ var ITEM_BEHAVIOR = {
     points_type: 'exchange',
     points_amount: 1,
   },
-  '离恨烟兑换币×12': {
+  '无量业火兑换币x12': {
     quality: 'purple',
     has_showcase: false,
     gacha_behavior: 'points',
@@ -306,7 +306,7 @@ var ITEM_BEHAVIOR = {
     points_type: 'exchange',
     points_amount: 12,
   },
-  '离恨烟兑换币×15': {
+  '无量业火兑换币x15': {
     quality: 'purple',
     has_showcase: false,
     gacha_behavior: 'points',
@@ -314,7 +314,7 @@ var ITEM_BEHAVIOR = {
     points_type: 'exchange',
     points_amount: 15,
   },
-  '离恨烟兑换币×18': {
+  '无量业火兑换币x18': {
     quality: 'purple',
     has_showcase: false,
     gacha_behavior: 'points',
@@ -322,7 +322,7 @@ var ITEM_BEHAVIOR = {
     points_type: 'exchange',
     points_amount: 18,
   },
-  '离恨烟兑换币×2': {
+  '无量业火兑换币x2': {
     quality: 'purple',
     has_showcase: false,
     gacha_behavior: 'points',
@@ -330,7 +330,7 @@ var ITEM_BEHAVIOR = {
     points_type: 'exchange',
     points_amount: 2,
   },
-  '离恨烟兑换币×3': {
+  '无量业火兑换币x3': {
     quality: 'purple',
     has_showcase: false,
     gacha_behavior: 'points',
@@ -338,7 +338,7 @@ var ITEM_BEHAVIOR = {
     points_type: 'exchange',
     points_amount: 3,
   },
-  '离恨烟兑换币×5': {
+  '无量业火兑换币x5': {
     quality: 'purple',
     has_showcase: false,
     gacha_behavior: 'points',
@@ -346,7 +346,7 @@ var ITEM_BEHAVIOR = {
     points_type: 'exchange',
     points_amount: 5,
   },
-  '离恨烟兑换币×6': {
+  '无量业火兑换币x6': {
     quality: 'purple',
     has_showcase: false,
     gacha_behavior: 'points',
@@ -354,7 +354,7 @@ var ITEM_BEHAVIOR = {
     points_type: 'exchange',
     points_amount: 6,
   },
-  '离恨烟兑换币×8': {
+  '无量业火兑换币x8': {
     quality: 'purple',
     has_showcase: false,
     gacha_behavior: 'points',
