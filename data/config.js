@@ -17,17 +17,17 @@ var SIMULATOR_CONFIG = {
   // ===== 兑换币（分解获得）=====
   exchangeCoin: {
     name: '业火无量兑换币',
-    smallImage: '../images/items_box/无量业火兑换币x18/small.png',
-    bonusImage: '../images/items_box/无量业火兑换币x18/small.png',
+    smallImage: 'images/items_box/无量业火兑换币x18/small.png',
+    bonusImage: 'images/items_box/无量业火兑换币x18/small.png',
     quality: 'purple',
   },
   
   // ===== 主题颜色 =====
   theme: {
-    primaryColor: '#c43e1f',
-    primaryColorRgb: '196,62,31',
-    primaryColorLight: '#e05a35',
-    accentColor: '#ff8c5a',
+    primaryColor: '#00bcd4',
+    primaryColorRgb: '0,188,212',
+    primaryColorLight: '#4dd0e1',
+    accentColor: '#ffd700',
   },
   
   // ===== 操作指南 =====

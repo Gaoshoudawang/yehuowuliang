@@ -1908,18 +1908,9 @@ function closeGachaTen(){
   checkBonusEligibility();
 }
 
-// ========== 额外加赠逻辑 ==========
-// 检查是否满足额外加赠条件（每满十次，包括单抽和十连抽）
+// ========== 额外加赠逻辑（业火无量禁用加赠） ==========
 function checkBonusEligibility(){
-  // 检查从上一次触发到现在，是否跨过了任何10的倍数
-  var lastMultiple = Math.floor(lastBonusDrawCount / 10) * 10; // 上一次触发时或之前的最近10的倍数
-  var currentMultiple = Math.floor(totalDrawCount / 10) * 10; // 当前次数或之前的最近10的倍数
-  if(currentMultiple > lastMultiple && currentMultiple > 0){
-    bonusPending = true;
-    lastBonusDrawCount = currentMultiple; // 更新上一次触发额外加赠的次数为最近的10的倍数
-    // 立刻显示额外加赠提示页面
-    openBonusTip();
-  }
+  return false;
 }
 
 // 进行概率抽奖，获得额外加赠的奖励
