@@ -137,15 +137,47 @@ var ITEM_BOX_CONFIG = {
     "gacha_behavior": "storage",
     "bonus_behavior": "warehouse"
   },
-  "离恨烟兑换币": {
+  "无量业火兑换币x18": {
     "quality": "purple",
     "has_showcase": false,
     "gacha_behavior": "points",
     "bonus_behavior": "points",
     "points_type": "exchange",
-    "points_amount": 1
+    "points_amount": 18
   },
-  "离恨烟夺宝币": {
+  "无量业火兑换币x12": {
+    "quality": "purple",
+    "has_showcase": false,
+    "gacha_behavior": "points",
+    "bonus_behavior": "points",
+    "points_type": "exchange",
+    "points_amount": 12
+  },
+  "无量业火兑换币x6": {
+    "quality": "purple",
+    "has_showcase": false,
+    "gacha_behavior": "points",
+    "bonus_behavior": "points",
+    "points_type": "exchange",
+    "points_amount": 6
+  },
+  "无量业火兑换币x3": {
+    "quality": "purple",
+    "has_showcase": false,
+    "gacha_behavior": "points",
+    "bonus_behavior": "points",
+    "points_type": "exchange",
+    "points_amount": 3
+  },
+  "无量业火兑换币x2": {
+    "quality": "purple",
+    "has_showcase": false,
+    "gacha_behavior": "points",
+    "bonus_behavior": "points",
+    "points_type": "exchange",
+    "points_amount": 2
+  },
+  "业火无量夺宝币": {
     "quality": "gold",
     "has_showcase": false,
     "decompose_points": 0,
